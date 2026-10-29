@@ -1,0 +1,420 @@
+/* =========================
+   MAIN LAYOUT
+========================= */
+
+.main-container {
+  display: flex;
+  min-height: 100vh;
+  background: #0f172a;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+  width: 230px;
+  background: #111c35;
+
+  padding: 30px 20px;
+  box-sizing: border-box;
+
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+
+  height: 100vh;
+  min-height: 100vh;
+}
+
+.sidebar h2 {
+  margin-bottom: 40px;
+  font-size: 22px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  padding: 15px 12px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #dbe4ff;
+  transition: 0.2s;
+}
+
+.sidebar li:hover {
+  background: #27365c;
+}
+
+
+/* =========================
+   LOGOUT BUTTON
+========================= */
+
+.logout-btn {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+
+  width: calc(100% - 40px);
+
+  padding: 13px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #ef4444;
+  color: white;
+
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: #dc2626;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.content {
+  margin-left: 230px;
+
+  width: calc(100% - 230px);
+
+  padding: 35px;
+
+  box-sizing: border-box;
+
+  background: #0f172a;
+
+  min-height: 100vh;
+}
+
+.content > h2 {
+  margin-bottom: 25px;
+}
+
+
+/* =========================
+   TOP CARDS
+========================= */
+
+.top-cards {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 15px;
+
+  margin-bottom: 25px;
+}
+
+.card-box {
+  background: #1c2943;
+
+  border-radius: 14px;
+
+  padding: 25px;
+
+  min-height: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  box-sizing: border-box;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card-box h3 {
+  font-size: 28px;
+  margin: 0 0 5px;
+}
+
+.card-box p {
+  margin: 0;
+  color: #cbd5e1;
+}
+
+
+/* =========================
+   ADD EVENT BOX
+========================= */
+
+.graph-box {
+  background: #1a2741;
+
+  border-radius: 16px;
+
+  padding: 28px;
+
+  margin-bottom: 25px;
+
+  box-sizing: border-box;
+}
+
+.graph-box h3 {
+  margin-top: 0;
+  margin-bottom: 22px;
+
+  font-size: 21px;
+}
+
+
+/* =========================
+   EVENT FORM GRID
+========================= */
+
+.event-form-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 14px 20px;
+}
+
+.event-form-grid .event-input {
+  margin-bottom: 0;
+}
+
+.event-form-grid textarea {
+  grid-column: span 2;
+
+  min-height: 100px;
+
+  resize: vertical;
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+.event-input {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 14px 16px;
+
+  margin-bottom: 14px;
+
+  background: #f8fafc;
+
+  color: #111827;
+
+  border: none;
+
+  border-radius: 9px;
+
+  font-size: 14px;
+
+  outline: none;
+}
+
+.event-input:focus {
+  box-shadow: 0 0 0 2px #6366f1;
+}
+
+
+/* =========================
+   ADD BUTTON
+========================= */
+
+.add-btn {
+  padding: 13px 24px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: linear-gradient(
+    135deg,
+    #7c3aed,
+    #3b82f6
+  );
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+
+  margin-top: 18px;
+}
+
+.add-btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+
+/* =========================
+   MANAGE EVENTS
+========================= */
+
+.event-section {
+  background: #1a2741;
+
+  border-radius: 16px;
+
+  padding: 28px;
+}
+
+.event-section > h3 {
+  margin-top: 0;
+
+  margin-bottom: 20px;
+
+  font-size: 21px;
+}
+
+
+/* =========================
+   EVENT CARD
+========================= */
+
+.event-item {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr) auto;
+
+  gap: 20px;
+
+  background: #293953;
+
+  border-radius: 14px;
+
+  padding: 22px;
+
+  margin-bottom: 15px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   EVENT TITLE
+========================= */
+
+.event-item h4 {
+  margin: 0 0 10px;
+
+  font-size: 20px;
+
+  color: white;
+}
+
+
+/* =========================
+   EVENT DESCRIPTION
+========================= */
+
+.event-item p {
+  margin: 7px 0;
+
+  color: #d1d9e8;
+
+  line-height: 1.5;
+}
+
+
+/* =========================
+   DELETE BUTTON
+========================= */
+
+.event-item button {
+  align-self: center;
+
+  padding: 11px 18px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #ef4444;
+
+  color: white;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.event-item button:hover {
+  background: #dc2626;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .top-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .event-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .event-form-grid textarea {
+    grid-column: span 1;
+  }
+
+}
+
+
+@media (max-width: 650px) {
+
+  .sidebar {
+    width: 180px;
+  }
+
+  .content {
+    margin-left: 180px;
+
+    width: calc(100% - 180px);
+
+    padding: 20px;
+  }
+
+  .top-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .event-item {
+    grid-template-columns: 1fr;
+  }
+
+  .event-item button {
+    width: 100%;
+  }
+
+}

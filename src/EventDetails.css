@@ -1,0 +1,419 @@
+/* =========================================
+   EVENT DETAILS PAGE
+========================================= */
+
+.event-page {
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  background: #0f172a;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  color: #ffffff;
+}
+
+
+/* =========================================
+   MAIN EVENT CARD
+========================================= */
+
+.event-card {
+  width: 100%;
+  max-width: 1000px;
+  box-sizing: border-box;
+
+  background: #1e2d4a;
+
+  border-radius: 18px;
+
+  padding: 35px 40px;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.back-btn {
+  display: inline-block;
+
+  padding: 10px 18px;
+
+  margin-bottom: 25px;
+
+  border: 1px solid #64748b;
+
+  border-radius: 8px;
+
+  background: transparent;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  background: #334155;
+}
+
+
+/* =========================================
+   EVENT TITLE
+========================================= */
+
+.event-card h1 {
+  margin: 0 0 18px 0;
+
+  font-size: 34px;
+
+  line-height: 1.2;
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.event-description {
+  margin: 0 0 30px 0;
+
+  color: #dbe4f0;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   EVENT INFORMATION GRID
+========================================= */
+
+.event-info {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 18px;
+
+  margin-bottom: 35px;
+}
+
+
+/* EACH EVENT DETAIL */
+
+.event-info > div {
+  min-height: 85px;
+
+  box-sizing: border-box;
+
+  padding: 18px;
+
+  background: #293b5b;
+
+  border-radius: 10px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  gap: 8px;
+}
+
+
+/* DETAIL TITLE */
+
+.event-info strong {
+  display: block;
+
+  font-size: 15px;
+
+  color: #ffffff;
+}
+
+
+/* DETAIL VALUE */
+
+.event-info span {
+  display: block;
+
+  font-size: 15px;
+
+  color: #cbd5e1;
+}
+
+
+/* =========================================
+   REGISTRATION SECTION
+========================================= */
+
+.registration-box {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 30px;
+
+  background: #16243d;
+
+  border: 1px solid #334866;
+
+  border-radius: 15px;
+}
+
+
+.registration-box h2 {
+  margin: 0 0 10px 0;
+
+  font-size: 25px;
+
+  color: #ffffff;
+}
+
+
+.registration-box > p {
+  margin: 0 0 25px 0;
+
+  color: #cbd5e1;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.form-label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   TEAM SIZE DROPDOWN
+========================================= */
+
+.team-size-select {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 14px 15px;
+
+  margin-bottom: 25px;
+
+  border: 1px solid #475569;
+
+  border-radius: 8px;
+
+  background: #293b5b;
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  outline: none;
+
+  cursor: pointer;
+}
+
+.team-size-select:focus {
+  border-color: #4f8cff;
+}
+
+
+/* =========================================
+   MEMBER SECTION
+========================================= */
+
+.member-section {
+  width: 100%;
+
+  margin-top: 25px;
+}
+
+
+.member-section h3 {
+  margin: 0 0 12px 0;
+
+  font-size: 18px;
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   TEAM LEADER
+========================================= */
+
+.leader-box {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 14px 16px;
+
+  background: #293b5b;
+
+  border: 1px solid #475569;
+
+  border-radius: 8px;
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   TEAM MEMBER INPUT
+========================================= */
+
+.member-input {
+  width: 100%;
+
+  margin-bottom: 18px;
+}
+
+
+.member-input label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: #e2e8f0;
+}
+
+
+.member-input input {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 14px 15px;
+
+  border: 1px solid #475569;
+
+  border-radius: 8px;
+
+  background: #293b5b;
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  outline: none;
+}
+
+
+.member-input input::placeholder {
+  color: #94a3b8;
+}
+
+
+.member-input input:focus {
+  border-color: #4f8cff;
+
+  box-shadow: 0 0 0 2px rgba(79, 140, 255, 0.15);
+}
+
+
+/* =========================================
+   REGISTER BUTTON
+========================================= */
+
+.register-btn {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 15px;
+
+  margin-top: 25px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: linear-gradient(
+    90deg,
+    #7c3aed,
+    #3b82f6
+  );
+
+  color: #ffffff;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+
+.register-btn:hover {
+  transform: translateY(-1px);
+
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.25);
+}
+
+
+.register-btn:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .event-page {
+    padding: 20px 12px;
+  }
+
+  .event-card {
+    padding: 25px 20px;
+  }
+
+  .event-card h1 {
+    font-size: 28px;
+  }
+
+  .event-info {
+    grid-template-columns: 1fr;
+  }
+
+  .registration-box {
+    padding: 20px;
+  }
+}

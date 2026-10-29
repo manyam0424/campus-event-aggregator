@@ -1,0 +1,567 @@
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+}
+
+
+/* =========================================
+   MAIN DASHBOARD
+========================================= */
+
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  background: #0f172a;
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar {
+  width: 235px;
+  min-height: 100vh;
+  background: #111d36;
+
+  padding: 35px 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.sidebar h2 {
+  margin: 0 0 50px 10px;
+
+  font-size: 24px;
+  color: white;
+}
+
+.sidebar ul {
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 15px 10px;
+  margin-bottom: 8px;
+
+  font-size: 16px;
+
+  color: #e2e8f0;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.sidebar li:hover {
+  background: #263b68;
+  color: white;
+}
+
+.logout-btn {
+  margin-top: auto;
+
+  width: 100%;
+
+  padding: 13px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #f04444;
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.logout-btn:hover {
+  background: #d93636;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.content {
+  margin-left: 235px;
+
+  width: calc(100% - 235px);
+
+  min-height: 100vh;
+
+  padding: 45px 35px;
+
+  background: #0f172a;
+}
+
+.content > h2 {
+  margin: 0 0 30px 0;
+
+  font-size: 28px;
+  color: white;
+}
+
+
+/* =========================================
+   TOP CARDS
+========================================= */
+
+.top-cards {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 18px;
+
+  margin-bottom: 30px;
+}
+
+.card-box {
+  min-height: 110px;
+
+  padding: 25px;
+
+  background: #1d2b49;
+
+  border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  color: white;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.card-box:hover {
+  transform: translateY(-3px);
+
+  background: #243657;
+}
+
+.card-box h3 {
+  margin: 0 0 8px 0;
+
+  font-size: 25px;
+}
+
+.card-box p {
+  margin: 0;
+
+  font-size: 15px;
+
+  color: #e2e8f0;
+}
+
+
+/* =========================================
+   GENERAL SECTIONS
+========================================= */
+
+.graph-box,
+.event-section {
+  width: 100%;
+
+  background: #1b2945;
+
+  border-radius: 16px;
+
+  padding: 28px;
+
+  margin-bottom: 28px;
+}
+
+.graph-box h3,
+.event-section h3 {
+  margin: 0 0 20px 0;
+
+  font-size: 22px;
+
+  color: white;
+}
+
+.graph-box p,
+.event-section > p {
+  color: #e2e8f0;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   INPUTS
+========================================= */
+
+.event-input {
+  width: 100%;
+
+  padding: 14px 16px;
+
+  margin-bottom: 15px;
+
+  border: none;
+  outline: none;
+
+  border-radius: 10px;
+
+  background: #f8fafc;
+
+  color: #1e293b;
+
+  font-size: 15px;
+}
+
+.event-input:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.add-btn {
+  padding: 13px 22px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: linear-gradient(
+    135deg,
+    #7c3aed,
+    #3b82f6
+  );
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.add-btn:hover {
+  transform: translateY(-2px);
+}
+
+.add-btn:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================
+   EVENT SECTION
+========================================= */
+
+.event-section {
+  overflow: hidden;
+}
+
+
+/* =========================================
+   EVENT CARD
+========================================= */
+
+.event-section .event-item {
+  position: relative;
+
+  width: 100%;
+
+  padding: 25px;
+
+  margin-bottom: 20px;
+
+  background: #2f425f;
+
+  border-radius: 16px;
+
+  display: block !important;
+
+  overflow: hidden;
+
+  color: white;
+}
+
+
+/* =========================================
+   EVENT TITLE
+========================================= */
+
+.event-section .event-item h4 {
+  display: block !important;
+
+  width: 100%;
+
+  margin: 0 0 18px 0;
+
+  padding: 0;
+
+  font-size: 22px;
+
+  font-weight: 700;
+
+  line-height: 1.4;
+
+  color: white;
+}
+
+
+/* =========================================
+   EVENT DESCRIPTION
+========================================= */
+
+.event-section .event-item p {
+  display: block !important;
+
+  width: 100%;
+
+  margin: 0 0 15px 0;
+
+  padding: 0;
+
+  color: #f1f5f9;
+
+  font-size: 16px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   EVENT BUTTON
+========================================= */
+
+.event-section .event-item button {
+  display: block !important;
+
+  width: 100%;
+
+  margin: 20px 0 0 0;
+
+  padding: 13px 18px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #f04444;
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.event-section .event-item button:hover {
+  background: #d93636;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   TIMETABLE TABLE
+========================================= */
+
+.event-section table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+}
+
+.event-section th {
+  background: #293953;
+
+  color: white;
+
+  padding: 14px;
+
+  text-align: left;
+
+  font-size: 15px;
+}
+
+.event-section td {
+  padding: 14px;
+
+  border-bottom: 1px solid #3b4c68;
+
+  color: #f1f5f9;
+
+  font-size: 15px;
+}
+
+.event-section tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* =========================================
+   TIMETABLE INFORMATION
+========================================= */
+
+.event-section strong {
+  color: white;
+}
+
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+
+/* =========================================
+   MOBILE / SMALL SCREEN
+========================================= */
+
+@media (max-width: 900px) {
+
+  .sidebar {
+    width: 200px;
+  }
+
+  .content {
+    margin-left: 200px;
+
+    width: calc(100% - 200px);
+
+    padding: 30px 20px;
+  }
+
+  .top-cards {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .main-container {
+    display: block;
+  }
+
+  .sidebar {
+    position: relative;
+
+    width: 100%;
+
+    min-height: auto;
+
+    padding: 20px;
+  }
+
+  .sidebar h2 {
+    margin-bottom: 20px;
+  }
+
+  .sidebar ul {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 5px;
+  }
+
+  .sidebar li {
+    margin: 0;
+
+    padding: 10px;
+  }
+
+  .logout-btn {
+    margin-top: 20px;
+  }
+
+  .content {
+    margin-left: 0;
+
+    width: 100%;
+
+    padding: 25px 15px;
+  }
+
+  .top-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .graph-box,
+  .event-section {
+    padding: 20px;
+  }
+
+  .event-section .event-item {
+    padding: 20px;
+  }
+
+  .event-section table {
+    min-width: 650px;
+  }
+}
